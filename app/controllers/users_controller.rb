@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.find_by(name: params[:name])
+    @user = User.create(user_params)
     redirect_to controller:'users', action:'new' unless @user.authenticate(params[:password])
     session[:user_id] = @user.id
   end
