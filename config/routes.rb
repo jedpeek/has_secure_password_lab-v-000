@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+
+  root 'users#index'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   post '/logout' => 'sessions#destroy'
 
   resources :users, only: [:new, :create]
-   root 'users#index'
+
    get '/signup' => 'users#index'
    post '/signup' => 'users#create'
    post '/signup' => 'sessions#create'
