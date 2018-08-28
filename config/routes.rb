@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
 
-   get '/signup' => 'users#index'
-   post '/signup' => 'users#create'
-   post '/signup' => 'sessions#create'
+   #get '/signup' => 'users#index'
+   #post '/signup' => 'users#create'
+   #post '/signup' => 'sessions#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
