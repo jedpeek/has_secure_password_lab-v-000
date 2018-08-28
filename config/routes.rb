@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root 'users#index'
-  get '/login' => 'sessions#new'
+  get '/login' => 'users#new'
   post '/login' => 'sessions#create'
   post '/logout' => 'sessions#destroy'
 
