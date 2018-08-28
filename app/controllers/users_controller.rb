@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     redirect_to controller:'users', action:'new' unless @user.authenticate(params[:password])
-    session[:user_id] = @user.id
   end
 
   private
